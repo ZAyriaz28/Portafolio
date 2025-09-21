@@ -1,0 +1,274 @@
+/* ===== NUEVO TEMA: TECNOLÓGICO Y CREATIVO (MODO OSCURO) ===== */
+
+/* ===== VARIABLES Y ESTILOS GLOBALES ===== */
+:root {
+    --color-fondo: #121212; /* Gris casi negro */
+    --color-superficie: #1E1E1E; /* Gris oscuro para tarjetas */
+    --color-primario: #007BFF; /* Azul eléctrico vibrante */
+    --color-texto-principal: #EAEAEA;
+    --color-texto-secundario: #A0A0A0;
+    --fuente-principal: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 50px;
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+.header {
+    background-color: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--color-texto-principal);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+/* ===== SECCIÓN PERFIL ===== */
+.perfil-section {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.perfil-title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.perfil-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.perfil-description {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-texto-secundario);
+}
+
+/* ===== SECCIÓN HABILIDADES, EXPERIENCIA, PROYECTOS, CERTIFICACIONES (TARJETAS) ===== */
+.habilidad-card,
+.experiencia-item,
+.proyecto-card,
+.certificacion-card {
+    background-color: var(--color-superficie);
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.habilidad-card:hover,
+.experiencia-item:hover,
+.proyecto-card:hover,
+.certificacion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.1);
+    border-color: var(--color-primario);
+}
+
+/* ===== HABILIDADES ===== */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.habilidad-card {
+    padding: 30px;
+    text-align: center;
+}
+
+.habilidad-card i {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+/* ===== EXPERIENCIA ===== */
+.experiencia-item {
+    padding: 30px;
+    border-left: 5px solid var(--color-primario);
+}
+
+.experiencia-item ul { list-style-type: none; padding-left: 0; }
+.experiencia-item li { margin-bottom: 10px; line-height: 1.6; }
+
+/* ===== PROYECTOS ===== */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.proyecto-card {
+    overflow: hidden;
+}
+.proyecto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+.proyecto-card:hover img {
+    opacity: 1;
+}
+.proyecto-info {
+    padding: 20px;
+}
+.proyecto-info h4 {
+    margin-top: 0;
+    color: var(--color-texto-principal);
+}
+
+/* ===== CERTIFICACIONES ===== */
+.certificaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.certificacion-card {
+    text-decoration: none;
+    color: var(--color-texto-principal);
+    overflow: hidden;
+}
+.certificacion-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #2a2a2a;
+}
+.certificacion-info {
+    padding: 20px;
+}
+.certificacion-info h4 {
+    margin: 0 0 5px 0;
+}
+.certificacion-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-primario);
+}
+
+/* ===== FOOTER Y CONTACTO ===== */
+footer {
+    background-color: var(--color-superficie);
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.footer-title {
+    color: #ffffff;
+}
+
+.contacto-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contacto-info a {
+    color: var(--color-texto-principal);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.contacto-info a:hover {
+    color: var(--color-primario);
+}
+
+.contacto-info i {
+    margin-right: 8px;
+}
+
+.footer-copy {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+}
+
+/* ===== ESTILOS RESPONSIVOS (sin cambios) ===== */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .perfil-title {
+        font-size: 2.8rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* ===== ESTILOS PARA ANIMACIONES CON JS ===== */
+
+/* Estado inicial 'oculto' de las tarjetas */
+.habilidad-card,
+.experiencia-item,
+.proyecto-card,
+.certificacion-card {
+    /* ... (los estilos que ya tenías) ... */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final 'visible' que añadiremos con JS */
+.habilidad-card.visible,
+.experiencia-item.visible,
+.proyecto-card.visible,
+.certificacion-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
