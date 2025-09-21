@@ -10,7 +10,12 @@
 <body>
 
     <header class="header">
-        <nav class="nav">
+    <div class="nav-container">
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav" id="nav-menu">
             <a href="#perfil" class="nav-link">Perfil</a>
             <a href="#habilidades" class="nav-link">Habilidades</a>
             <a href="#experiencia" class="nav-link">Experiencia</a>
@@ -18,7 +23,8 @@
             <a href="#certificaciones" class="nav-link">Certificaciones</a>
             <a href="#contacto" class="nav-link">Contacto</a>
         </nav>
-    </header>
+    </div>
+</header>
 
     <main>
         <section id="perfil" class="container perfil-section">
@@ -109,14 +115,14 @@
         <section id="certificaciones" class="container">
     <h2 class="section-title">Certificaciones</h2>
     <div class="certificaciones-grid">
-        <a href="certificado_participante_62735 (1).pdf" target="_blank" class="certificacion-card">
+        <a href="certificaciones/certificado_participante_62735 (1).pdf" target="_blank" class="certificacion-card">
             <img src="Certificacion_Rally.png" alt="Vista previa del certificado del Rally Internacional">
             <div class="certificacion-info">
                 <h4>Certificado del Rally Internacional</h4>
                 <p>Haz clic para ver el PDF</p>
             </div>
         </a>
-        <a href="RECONOCIMIENTO MARATON TECNOLOGICO-ZAYRI-NOV-2024.pdf" target="_blank" class="certificacion-card">
+        <a href="certificaciones/RECONOCIMIENTO MARATON TECNOLOGICO-ZAYRI-NOV-2024.pdf" target="_blank" class="certificacion-card">
             <img src="RECONOCIMIENTO MARATON TECNOLOGICO-ZAYRI-NOV-2024.jpeg" alt="Vista previa del certificado del Maratón UNAN León">
             <div class="certificacion-info">
                 <h4>Certificado del Maratón UNAN León</h4>
@@ -143,5 +149,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
