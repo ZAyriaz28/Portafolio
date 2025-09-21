@@ -1,6 +1,10 @@
 /* ===== NUEVO TEMA: TECNOLÓGICO Y CREATIVO (MODO OSCURO) ===== */
 
 /* ===== VARIABLES Y ESTILOS GLOBALES ===== */
+
+body {
+  overflow-x: hidden;
+}
 :root {
     --color-fondo: #121212; /* Gris casi negro */
     --color-superficie: #1E1E1E; /* Gris oscuro para tarjetas */
@@ -340,3 +344,4 @@ footer {
         font-size: 1.5rem;
     }
 }
+
