@@ -29,3 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 });
+
+// ... (El código del Intersection Observer que ya tenías) ...
+
+// Lógica para el menú de hamburguesa
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const navMenu = document.getElementById('nav-menu');
+
+hamburgerMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('is-active');
+});
+
+// Opcional: Cerrar el menú al hacer clic en un enlace
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('is-active');
+    });
+});
